@@ -89,10 +89,10 @@
   dependencies:
     fast-json-stringify "^5.7.0"
 
-"@fixieai/fixie@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.npmjs.org/@fixieai/fixie/-/fixie-1.0.11.tgz"
-  integrity sha512-vOXJirFoM2a+22sMfCcF03hDHatzTV1XDeb33SHYdIqDHrhcOPvgZ7SqH4fE1AZnWdh/Dt7ijq9wgFEEEFL5Lg==
+"@fixieai/fixie@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.npmjs.org/@fixieai/fixie/-/fixie-1.0.13.tgz"
+  integrity sha512-oM1R0pTir00vc0nuPm0XHFh6ETPCNnVJ8W4h1LQEL3GEo6CzdbDeNRUGQCIKwEYmAZqBb7A3tXHLBd23bxzlFw==
   dependencies:
     "@apollo/client" "^3.8.1"
     apollo-upload-client "^17.0.0"
