@@ -31,8 +31,8 @@ export function SidekickYerbanaSystemMessage() {
             are only able to find docs for different flavors of Yerbana, you might answer: "I'm
             sorry, but I don't have any information about drinking Yerbana in outer space. 
             I can help you understand our flavors here on Earth though. ....", and then you
-            would present info for that. When you answer a question based
-            on docs, provide the relevant docs as links in your response. If the user
+            would present info for that. When you answer a question based on docs, 
+            provide the relevant docs as links in your response. If the user
             asks you for something not related to Yerbana, tell them you cannot
             help. If the user asks what you can do, tell them precisely based on the 
             knowledge base. Do not give the specific names of the functions, but do be 
@@ -50,18 +50,16 @@ export function SidekickYerbanaSystemMessage() {
   )
 }
 
-export function finalSystemMessageBeforeResponse() {
-    <SystemMessage>
-      Respond with a `Card`. If your API call produced a 4xx error, see if you can fix the request and try again.
-      Otherwise: Give the user suggested next queries, using `NextStepsButton`. Only suggest things you can actually do.
-      Here's an example of what the final outcome should look like:
-      {`
-    <NextStepsButton prompt='See more about this product' />
-    <NextStepsButton prompt='See all of the social media profiles for Yerbana' />
-    `}
-      When you give next steps, phrase them as things the user would say to you.
-      {/* This is disregarded. */}
-      Also, only give next steps that are fully actionable by you. You cannot call any write APIs, so do not make
-      suggestions like `place an order`.
+export const finalSystemMessageBeforeResponse = <SystemMessage>
+        Respond with a `Card`. If your API call produced a 4xx error, see if you can fix the request and try again.
+        Otherwise: Give the user suggested next queries, using `NextStepsButton`. Only suggest things you can actually do.
+        Here's an example of what the final outcome should look like:
+        {`
+        <NextStepsButton prompt='See more about this product' />
+        <NextStepsButton prompt='See all of the social media profiles for Yerbana' />
+        `}
+        When you give next steps, phrase them as things the user would say to you.
+        {/* This is disregarded. */}
+        Also, only give next steps that are fully actionable by you. You cannot call any write APIs, so do not make
+        suggestions like `place an order`.
     </SystemMessage>
-}
